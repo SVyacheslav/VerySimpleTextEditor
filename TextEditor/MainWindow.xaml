@@ -1,0 +1,48 @@
+﻿<Window x:Class="TextEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextEditor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            <WrapPanel>
+                <Button Margin="10, 20" 
+                        Padding="5, 0" 
+                        MinWidth="40" 
+                        x:Name="CUT"
+                        Click="CUT_Click">
+                    CUT
+                </Button>
+                <Button Margin="10, 20"
+                        Padding="5, 0"
+                        MinWidth="40"
+                        x:Name="COPY"
+                        Click="COPY_Click">
+                    COPY
+                </Button>
+                <Button Margin="10, 20" 
+                        Padding="5, 0" 
+                        MinWidth="40" 
+                        x:Name="PASTE"
+                        Click="PASTE_Click">
+                    PASTE
+                </Button>
+            </WrapPanel>
+        </StackPanel>
+        
+        <Border BorderThickness="1" BorderBrush="Black">
+            <TextBox Margin="10, 50, 10, 10"
+                     HorizontalAlignment="Stretch"
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     AcceptsTab="True"
+                     VerticalScrollBarVisibility="Auto"
+                     HorizontalScrollBarVisibility="Auto"
+                     x:Name="textBox">
+            </TextBox>
+        </Border>
+    </Grid>
+</Window>
